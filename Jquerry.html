@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquerry</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+    
+            $("#draven").hide()
+
+            $('#show').click(function(){
+                $('#draven').show();
+            });
+    
+            $('#toggle').click(function(){
+                $('#draven').toggle(0);
+            });
+    
+            $('#slideUp').click(function(){
+                $('#sett').slideUp();
+            });
+    
+            $('#slideDown').click(function(){
+                $('#sett').slideDown();
+            });
+    
+            $('#slideToggle').click(function(){
+                $('#sett').slideToggle();
+            });
+    
+            $('#fadeIn').click(function(){
+                $('#sett').fadeIn("slow");
+            });
+    
+            $('#fadeOut').click(function(){
+                $('#sett').fadeOut(1000);
+            });
+    
+            $('#addClass').click(function(){
+                $('h2').addClass("paper");
+            });
+    
+            $('#before').click(function(){
+                $('#adelante').before("<p>atras</p>");
+            });
+    
+            $('#after').click(function(){
+                $('#atras').after("<b>adelante</b>");
+            });
+
+            $('#append').click(function(){
+                $('#append').after("<b>Siguiente</b>");
+            });
+        });
+    
+        </script>
+    
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            max-width: 1000px;
+            background-color: rgb(129, 5, 5);
+        }
+        .box{
+            width: 1000px;
+        }
+        .box1{
+            width: 490px;
+            text-align: center;
+            border: blue solid 3px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .box2{
+            width: 490px;
+            display: inline-block;
+            text-align: center;
+            border: green solid 3px;
+        }
+        button{
+            width: 100px;
+            height: 20px;
+            border: 2px black;
+            border-radius: 10px;
+            background-color: darkgreen;
+            font-weight: 800;
+            text-align: center;
+            vertical-align: middle;
+
+        }
+
+        #slideDown{
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ejemplos de Jquerry</h1>
+    </header>
+    <main>
+        <div class="box">
+            <div class="box1">
+                <h2>Hide</h2>
+            </div>
+            <div class="box2">
+                <h2>Permite ocultar un elemento <br>(hay una imagen oculta)</h2>
+                <img src="Draven.jpg" width="200px" title="imagen de draven" id="draven">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>Show</h2>
+            </div>
+            <div class="box2">
+                <h2>Permite mostrar las secciones ocultas de un elemento</h2>
+                <button id="show">Show</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>Togle</h2>
+            </div>
+            <div class="box2">
+                <h2>Permite mostrar o ocultar un elemento</h2>
+                <button id="toggle">Toggle</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>slideUp</h2>
+            </div>
+            <div class="box2">
+                <h2>Oculta un elemento el efecto de deslizamiento (acordeón).</h2>
+                <button id="slideUp">slideUp</button>
+                <img src="Sett.jpg" width="200px" title="imagen de Sett" id="sett">
+            </div>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>slideDown</h2>
+            </div>
+            <div class="box2">
+                <h2>Muestra un elemento con un efecto de deslizamiento (acordeón)</h2>
+                <button id="slideDown">slideDown</button>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>slideToggle</h2>
+            </div>
+            <div class="box2">
+                <h2>Muestra u oculta un elemento con efecto de deslizamiento (acordeón).</h2>
+                <button id="slideToggle">slideToggle</button>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>fadeIn</h2>
+            </div>
+            <div class="box2">
+                <h2>muestra un elemento (anteriormente oculto) cambiando su opacidad</h2>
+                <button id="fadeIn">fadeIn</button>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>fadeOut</h2>
+            </div>
+            <div class="box2">
+                <h2>asigna un nivel de opacidad de un elemento dado.</h2>
+                <button id="fadeOut">fadeOut</button>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>addClass</h2>
+            </div>
+            <div class="box2">
+                <h2>podemos añadir clases a los elementos</h2>
+                <button id="addClass">addClass</button>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>before</h2>
+            </div>
+            <div class="box2">
+                <h2 id="adelante">añade contenido antes del elemento</h2>
+                <button id="before">before</button>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>after</h2>
+            </div>
+            <div class="box2">
+                <h2 id="atras">añade contenido despues del elemento</h2>
+                <button id="after">after</button>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>append</h2>
+            </div>
+            <div class="box2">
+                <h2>añade o inserta contenido al final del elemento seleccionado</h2>
+                <button id="append">append</button>
+        </div>
+    </main>
+    
+</body>
+</html>
